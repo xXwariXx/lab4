@@ -6,14 +6,12 @@ import java.util.ArrayList;
 
 public class EnterPoint {
     private static boolean isLine = true;
+    private static int x = 0;
+    private static int y = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
         double[][] arr = readFromFile("data.txt");
         double minTemp;
-
-
-
-
     }
 
     private static double[][] readFromFile(String fileName) throws FileNotFoundException {
