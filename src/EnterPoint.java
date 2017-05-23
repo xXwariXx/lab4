@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class EnterPoint {
+    private static boolean isLine = true;
+
     public static void main(String[] args) throws FileNotFoundException {
         double[][] arr = readFromFile("data.txt");
         double minTemp;
@@ -12,11 +14,6 @@ public class EnterPoint {
 
 
 
-    }
-
-    private int findIndexOfMin(double[] arr){
-
-        return 0;
     }
 
     private static double[][] readFromFile(String fileName) throws FileNotFoundException {
@@ -31,5 +28,10 @@ public class EnterPoint {
             }
         }
         return numbers;
+    }
+
+    private int findIndexOfMin(double[] arr) {
+
+        return 0;
     }
 }
