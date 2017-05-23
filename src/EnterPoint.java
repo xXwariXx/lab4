@@ -11,7 +11,6 @@ public class EnterPoint {
 
     public static void main(String[] args) throws FileNotFoundException {
         double[][] arr = readFromFile("data.txt");
-        double minTemp;
     }
 
     private static double[][] readFromFile(String fileName) throws FileNotFoundException {
@@ -28,8 +27,21 @@ public class EnterPoint {
         return numbers;
     }
 
-    private int findIndexOfMin(double[] arr) {
-
-        return 0;
+    private static double[] findActualRow(double[][] arr) {
+        if (isLine) {
+            double[] row = new double[arr.length];
+            for (int i = 0; i < arr.length; i++) {
+                row[i] = arr[i][x];
+            }
+            isLine = false;
+            return row;
+        } else {
+            double[] row = new double[arr[0].length];
+            for (int i = 0; i < arr[0].length; i++) {
+                row[i] = arr[y][i];
+            }
+            isLine = true;
+            return row;
+        }
     }
 }
